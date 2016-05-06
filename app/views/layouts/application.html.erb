@@ -19,6 +19,7 @@
       
       <% if user_signed_in? %>
     					<li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out " %></li>
+    					<li><%= link_to "Profile", edit_user_registration_path %></li>
     					<% else %>
     					<li class="pull-right"><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
     					<% end %>
