@@ -11,9 +11,10 @@
      <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <%= link_to "Home", root_path, class: "navbar-brand" %>
+          <h2><i>beta</i><b>Blog</b></h2>
         </div>
         <ul class="nav navbar-nav">
+          <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
           <li><%= link_to 'Blog', blogs_path %></li>
       
               <% if user_signed_in? %>
@@ -23,15 +24,14 @@
     					  <li class="pull-right"><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
     					<% end %>
         </ul>
-    
-    <%= image_tag("banner.jpg", :alt => "banner", :size => "260x180") %>
-  
   </div>
 </nav>
-
+<div class="col-sm-12">
+  <%= image_tag("banner.jpg", :alt => "banner", :size => "260x180") %>
+</div>
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= yield %>
-
+</div>
 </body>
 </html>
