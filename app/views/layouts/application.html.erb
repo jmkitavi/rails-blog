@@ -8,18 +8,18 @@
 </head>
 <body>
   <div class="container">
-     <nav class="navbar navbar-inverse" style="background-color:white;">
+     <nav class="navbar navbar-inverse" style="color:#F1F1F1;">
       <div class="container-fluid">
         <div class="nav navbar-header">
-          <h3 class="navbar-brand" style="margin-top:-10px;" font-color="red";><i>beta</i><b>Blog</b></h3>
+          <h3 class="navbar-brand" style="margin-top:-5px;" font-color="red";><i>beta</i><b>Blog</b></h3>
         </div>
         <ul class="nav navbar-nav" style="margin-left:10px; font-color:black;">
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
           <li><%= link_to 'Blog', blogs_path %></li>
       
               <% if user_signed_in? %>
-    					   <li style="float:right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out " %></li>
-    					    <li style="float:right;"><%= link_to "Profile", edit_user_registration_path %></li>
+    					   <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out " %></li>
+    					    <li><%= link_to "Profile", edit_user_registration_path %></li>
     					<% else %>
     					  <li class="pull-right"><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
     					<% end %>
