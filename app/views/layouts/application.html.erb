@@ -22,13 +22,12 @@
                 <li>Profile
                     <ul class="dropdown-menu">
                         <li><%= link_to "Edit", edit_user_registration_path %></li>
-                        <li>View</li>
                     </ul>
                 </li>
                 <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out" %></li>
 
             <% else %>
-                <li"><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
+                <li><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in"%></li>
             <% end %>
         </ul>
         </div>
