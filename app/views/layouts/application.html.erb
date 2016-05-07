@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Workspace</title>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-inverse" style="background-color:blue;">
+<div class="container-fluid">
+<div class="nav navbar-header">
+<h3 class="navbar-brand" style="margin-top:-10px;font-color:red;"><i>beta</i><b>Blog</b></h3>
+</div>
+<ul class="nav navbar-nav" style="margin-left:10px; font-color:black;">
+<li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+<li><%= link_to 'Blog', blogs_path %></li>
+<% if user_signed_in? %>
+<li style="float:right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out " %></li>
+<li style="float:right;"><%= link_to "Profile", edit_user_registration_path %></li>
+<% else %>
+<li class="pull-right"><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
+<% end %>
+</ul>
+</div>
+</nav>
+<div style="margin-top:-30px">
+<%= image_tag("banner_2.png", :alt => "banner", :style=>"width:100%; height:200px") %>
+</div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+</div>
+</body>
+</html>
