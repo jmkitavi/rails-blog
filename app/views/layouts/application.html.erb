@@ -14,13 +14,13 @@
                 <h3 class="navbar-brand" style="margin-top:-15px; margin-left:-10px;"><%= image_tag("brand.jpg", :alt => "logo", :style=>"width:50px; height:50px", :class=>"img-circle") %></h3>
             </div>
         <ul class="nav navbar-nav" style="margin-left:10px;">
-            <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
+            <li class="pull-right"><%= link_to "Home", root_path, class: "navbar-brand" %></li>
             <li><%= link_to 'Blog', blogs_path %></li>
             <% if user_signed_in? %>
-                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out " %></li>
+                <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out pull" %></li>
                 <li><%= link_to "Profile", edit_user_registration_path %></li>
             <% else %>
-                <li><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in pull-right" %></li>
+                <li><%= link_to " Sign in", new_user_session_path, class: "page-scroll fa fa-sign-in" %></li>
             <% end %>
         </ul>
         </div>
