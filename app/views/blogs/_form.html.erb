@@ -16,17 +16,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :image, :class => 'control-label col-lg-2' %>
-    <%= f.file_field :image, :class => 'form-control' %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
     <%=f.error_span(:image) %>
   </div>
   <div class="field">
-    <%= f.label :title, :class => 'control-label col-lg-2' %>
+    <%= f.label :title %>
     <%= f.text_field :title, :class => 'form-control' %>
     <%=f.error_span(:title) %>
   </div>
   <div class="field">
-    <%= f.label :body, :class => 'control-label col-lg-2' %>
+    <%= f.label :body %>
     <%= f.text_field :body, :class => 'form-control' %>
     <%=f.error_span(:body) %>
   </div>
