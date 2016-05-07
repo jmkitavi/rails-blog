@@ -45,7 +45,7 @@ group :development do
 end
 
 gem 'devise'
-gem 'paperclip'
+gem 'paperclip','~>4.2'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 
