@@ -10,8 +10,8 @@
   <div class="container">
      <nav class="navbar navbar-inverse">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <h3 class="navbar-brand"><i>beta</i><b>Blog</b></h3>
+        <div class="nav navbar-header">
+          <h3 class="nav navbar-brand"><i>beta</i><b>Blog</b></h3>
         </div>
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
@@ -27,7 +27,7 @@
   </div>
 </nav>
 <div class="container container-fluid col-sm-12">
-  <%= image_tag("banner.jpg", :alt => "banner") %>
+  <%= link_to(image_tag("banner.jpg", :alt => "home image", :width => 100%, :height => 100, :title => "Click here to return to Home") "/") %>
 </div>
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
