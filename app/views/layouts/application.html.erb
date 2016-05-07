@@ -11,7 +11,9 @@
      <nav class="navbar navbar-inverse" style="color:#F1F1F1;">
       <div class="container-fluid">
         <div class="nav navbar-header">
-          <h3 class="navbar-brand" style="margin-top:-5px;" font-color="red";><i>beta</i><b>Blog</b></h3>
+          <h3 class="navbar-brand" style="margin-top:-5px;">
+            <%= image_tag("brand.jpg", :alt => "banner", :style=>"width:50px; height:50px") %>
+          </h3>
         </div>
         <ul class="nav navbar-nav" style="margin-left:10px; font-color:black;">
           <li><%= link_to "Home", root_path, class: "navbar-brand" %></li>
