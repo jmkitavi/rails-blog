@@ -1,38 +1,47 @@
 <%- model_class = Blog -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:image) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:body) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.image %></td>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%=l blog.created_at %></td>
-        <td>
+<% @blogs.each do |blog| %>
+<article>
+    <h2><%= link_to blog.title, blog %></h2>
+ 
+    <div class="row">
+        <div class="group1 col-sm-6 col-md-6">
+            <span class="glyphicon glyphicon-eye-open"></span><%= link_to "View", blog %>
+            <i> &nbsp; | &nbsp; </i>
+            <span class="glyphicon glyphicon-thumbs-up"></span> <a href="#">Like</a>
+        </div>
+        <div class="group2 col-sm-6 col-md-6">
+                <i class="pull-right"><span class="glyphicon glyphicon-time"></span><%=l blog.created_at %></i>
+                <i class="pull-right"> &nbsp; | &nbsp; </i>
+                <b class="pull-right"><span class="glyphicon glyphicon-pencil"></span><%= link_to "Comments", blog %></b>
+        </div>
+    </div>
+ 
+    <hr>
+    <div class="img-responsive" style="width:800px;margin:0 auto;">
+       <%=blog.image %>
+    </div>
+ <hr>
+     <div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 text-justify">
+      <%= blog.body %>
+    </div>
+    <hr>
+    <br/>
+    <div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_blog_path(blog), :class => 'btn btn-default btn-xs' %>
+                            edit_blog_path(blog), :class => 'btn btn-default btn-xs pull-right' %> 
+                            <i class="pull-right"> &nbsp; | &nbsp; </i>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       blog_path(blog),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
+                      :class => 'btn btn-xs btn-danger pull-right' %>
+    </div>
+</article>
+      
     <% end %>
-  </tbody>
-</table>
 
+<div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_blog_path,
             :class => 'btn btn-primary' %>
+</div>
