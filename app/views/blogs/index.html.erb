@@ -1,8 +1,7 @@
 <%- model_class = Blog -%>
 <% @blogs.each do |blog| %>
 <article>
-<div>
-        <h2><%= link_to blog.title, blog %></h2>
+    <h2><%= link_to blog.title, blog %></h2>
 
     <div class="row">
         <div class="group1 col-sm-6 col-md-6">
@@ -19,11 +18,11 @@
  
     <hr>
     <div class="img-responsive" style="width:800px;margin:0 auto;">
-       <%=image_tag blog.image.url(:medium)%>
+       <%=image_tag blog.image.url(:large)%>
     </div>
- <hr>
-     <div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 text-justify">
-      <%= blog.body %>
+     <hr>
+    <div class="col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 text-justify">
+          <%= blog.body %>
     </div>
     <hr>
     <br/>
@@ -37,13 +36,10 @@
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger pull-right' %>
     </div>
-</div>
-    <hr>
-    <hr>
     <br/>
+    <div class="row" style="height:20px;"></div>
 </article>
-<hr>
-<br>
+
       
     <% end %>
 
