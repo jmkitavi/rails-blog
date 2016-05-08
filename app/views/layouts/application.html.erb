@@ -23,7 +23,7 @@
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile<span class="caret"></span></a>
 <ul class="dropdown-menu">
 <li><%= link_to "Edit", edit_user_registration_path %></li>
-<li><p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p></li>
+<li><%= link_to "Delete", edit_user_registration_path %></li>
 </ul>
 </li>
 <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "page-scroll fa fa-sign-out" %></li>
