@@ -2,10 +2,8 @@
 <% @blogs.each do |blog| %>
 <article>
 <div>
-    <div class="row">
-        <h2 class="pull-left"><%= link_to blog.title, blog %></h2>
-    </div>
- 
+        <h2><%= link_to blog.title, blog %></h2>
+
     <div class="row">
         <div class="group1 col-sm-6 col-md-6">
             <span class="glyphicon glyphicon-eye-open"></span><%= link_to "View", blog %>
