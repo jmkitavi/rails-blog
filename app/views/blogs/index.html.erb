@@ -1,7 +1,9 @@
 <%- model_class = Blog -%>
 <% @blogs.each do |blog| %>
 <article>
-    <h2><%= link_to blog.title, blog %></h2>
+    <div class="row">
+        <h2 class="pull-left"><%= link_to blog.title, blog %></h2>
+    </div>
  
     <div class="row">
         <div class="group1 col-sm-6 col-md-6">
