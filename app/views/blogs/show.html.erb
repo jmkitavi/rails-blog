@@ -4,11 +4,11 @@
 </div>
 <dl class="dl-horizontal">
     <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
-  <dd><%= image_tag: @blog.image.url(:medium) %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @blog.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
-  <dd><%= @blog.body %></dd>
+        <dd><%= image_tag: @blog.image.url(:medium) %></dd>
+    <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+        <dd><%= @blog.title %></dd>
+    <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
+        <dd><%= @blog.body %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
